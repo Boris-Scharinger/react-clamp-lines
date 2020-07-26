@@ -181,12 +181,23 @@ export default class ClampLines extends PureComponent {
       'aria-hidden': this.state.expanded,
     }, this.state.text);
 
-    return (
-      <div className={this.getClassName()}>
-        {innerClampElement}
+    if (html) {
+      const htmlContent = `${innerClampElement}\n<style>${style}</style>`;
+      return (
+        <div className={this.getClassName()}
+            dangerouslySetInnerHTML={{ __html: htmlContent }}
+        >
         {this.getButton()}
-      </div>
-    );
+        </div>
+      )
+    } else {
+        return (
+          <div className={this.getClassName()}>
+            {innerClampElement}
+            {this.getButton()}
+          </div>
+        );
+      }
   }
 }
 
@@ -196,6 +207,7 @@ ClampLines.propTypes = {
   lines: PropTypes.number,
   ellipsis: PropTypes.string,
   buttons: PropTypes.bool,
+  html: PropTypes.bool,
   moreText: PropTypes.string,
   lessText: PropTypes.string,
   className: PropTypes.string,
@@ -211,5 +223,6 @@ ClampLines.defaultProps = {
   moreText: 'Read more',
   lessText: 'Read less',
   delay: 300,
-  innerElement: 'div'
+  innerElement: 'div',
+  html: false
 };

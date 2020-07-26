@@ -1,6 +1,6 @@
 {
   "name": "react-clamp-lines",
-  "version": "3.0.2",
+  "version": "3.1.0",
   "description": "Responsive and accessible clamping component with Read more/Read less buttons built for React.",
   "main": "lib/index.js",
   "files": [
@@ -28,9 +28,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zoltantothcom/react-clamp-lines.git"
+    "url": "https://github.com/boris-scharinger/react-clamp-lines.git"
   },
-  "author": "Zoltan Toth",
+  "author": "Zoltan Toth, Boris Scharinger",
   "license": "Unlicense",
   "keywords": [
     "clamp",
@@ -42,7 +42,7 @@
     "react ellipsis"
   ],
   "bugs": {
-    "url": "https://github.com/zoltantothcom/react-clamp-lines/issues"
+    "url": "https://github.com/boris-scharinger/react-clamp-lines/issues"
   },
-  "homepage": "https://stackblitz.com/edit/react-clamp-lines"
+  "homepage": "https://github.com/boris-scharinger/react-clamp-lines"
 }

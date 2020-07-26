@@ -2,7 +2,7 @@
 
 ![npm](https://img.shields.io/npm/dm/react-clamp-lines.svg) ![Snyk Vulnerabilities for npm package](https://img.shields.io/snyk/vulnerabilities/npm/react-clamp-lines.svg)
 
-Responsive and accessible clamping component with _&laquo;Read more&raquo;_/_&laquo;Read less&raquo;_ buttons built for [React](http://facebook.github.io/react/).
+Responsive and accessible clamping component with _&laquo;Read more&raquo;_/_&laquo;Read less&raquo;_ buttons built for [React](http://facebook.github.io/react/). Extended to display HTML text too.
 
 ![react-clamp-lines](react-clamp.png 'react-clamp-lines')
 
@@ -24,6 +24,7 @@ Responsive and accessible clamping component with _&laquo;Read more&raquo;_/_&la
 - accessible
 - window resize event `debounced` &mdash; and [why it's important](https://davidwalsh.name/javascript-debounce-function)
   > If your web app uses JavaScript to accomplish taxing tasks, a **debounce** function is essential to ensuring a given task doesn't fire so often that it bricks browser performance.
+. Extended to allow the rendering of HTML
 
 ## Usage
 
@@ -44,6 +45,7 @@ class App extends Component {
         lessText="Collapse"
         className="custom-class"
         innerElement="p"
+        html="false"
       />
     );
   }
@@ -89,6 +91,7 @@ List of all available props with their default values and description.
   delay={Number}
   stopPropagation={Boolean}
   innerElement={String}
+  html={Boolean}
 />
 ```
 
@@ -105,6 +108,7 @@ List of all available props with their default values and description.
 | delay           |          | {Number}  | `300`              | Milliseconds, the function is waiting before being triggered, after it stops being called |
 | stopPropagation |          | {Boolean} | `false`            | Prevents the event from bubbling up the DOM tree when clicked on the _&laquo;Read more&raquo;_ button |
 | innerElement    |          | {String}  | `div`              | Custom inner element for clamped text. **This MUST be a [block level element](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements#Elements) or styled as one.**
+| html            |          | {Boolean} | `false`            | Flag depicting if text should be html rendered |
 
 ## License
 
